@@ -664,19 +664,25 @@ for (Name element : Name##EnumExtensions::GetValues()) \
 std::cout<< std::endl;
 
 
-
-
 int main() {
+
 
 	using namespace Enums;
 	using namespace Extensions;
 	PRINT_VALUES(Variables)
-		PRINT_VALUES(Fruit)
-		PRINT_VALUES(Animal)
-		PRINT_VALUES(MathVars32)
-		PRINT_VALUES(MathVars64)
-		PRINT_VALUES(Vowels)
-		PRINT_VALUES(MobaGame)
+	PRINT_VALUES(Fruit)
+	PRINT_VALUES(Animal)
+	PRINT_VALUES(MathVars32)
+	PRINT_VALUES(MathVars64)
+	PRINT_VALUES(Vowels)
+	PRINT_VALUES(MobaGame)
+	/*	std::cout << "EnumName: "s + "MobaGame" << std::endl;
+	std::cout << StringExtensions::PadRight(EMPTY_STRING, 21 + 128, '_') << std::endl;
+	for (MobaGame element : MobaGameEnumExtensions::GetValues())
+	{
+		std::cout << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(element), 16) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(element, true), 32) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToIntegralString(element), 8) << " | " << StringExtensions::PadRight(IntegralExtensions::ToString(MobaGameEnumExtensions::ToIntegral(element)), 8) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(MobaGameEnumExtensions::Parse(MobaGameEnumExtensions::ToString(element))), 16) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(MobaGameEnumExtensions::Parse(MobaGameEnumExtensions::ToString(element, true))), 16) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(MobaGameEnumExtensions::Parse(MobaGameEnumExtensions::ToIntegralString(element))), 16) << " | " << StringExtensions::PadRight(MobaGameEnumExtensions::ToString(MobaGameEnumExtensions::Parse(MobaGameEnumExtensions::ToIntegral(element))), 16) << std::endl;
+	}
+	std::cout << std::endl;*/
 		std::cin.get();
 	return 0;
 }
